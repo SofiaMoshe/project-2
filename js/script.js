@@ -30,17 +30,17 @@ color.disabled = true;
 design.addEventListener("change", (e) => {
 	color.disabled = false;
 	for (let i = 0; i < optionColor.length; i++) {
-		const colorValue = e.target.value;
+		const selectedTheme = e.target.value;
 		const colorTheme = optionColor[i].getAttribute("data-theme");
-		if (colorValue === colorTheme) {
+
+		if (selectedTheme === colorTheme) {
 			optionColor[i].hidden = false;
 			optionColor[i].setAttribute("selected", true);
-			color.getElementsByTagName("option")[i].selected = true;
 
-		} else if (colorValue !== colorTheme) {
+		} else {
 			optionColor[i].hidden = true;
-			optionColor[i].setAttribute("selected", false);
-			// console.log(colorTheme);
+			optionColor[i].removeAttribute;
+
 		}
 	}
 });
@@ -140,7 +140,7 @@ function validEmailCheck() {
 
 //Helper function Activities
 const activitiesBox = document.querySelector("#activities-box");
-console.log(activitiesBox);
+// console.log(activitiesBox);
 
 function validRegisterCheck() {
 	if (total > 0) {
